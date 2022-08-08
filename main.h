@@ -1,36 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdlib.h>
+#include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
 #include <unistd.h>
 
-/**
- * struct convert - Entry point
- *
- * Description: Defines a structure for symbols and functions
- *
- * @sym: The operator
- * @f: The function associated
- */
-
-struct convert
-{
-
-	char *sym;
-	int (*f)(va_list);
-
-};
-typedef struct convert con_vert;
-
-
-int _putchar(char);
-int handle_sp(const char *format, con_vert f_list[], va_list arg_list);
 int _printf(const char *format, ...);
-int print_char(va_list);
-int print_string(va_list);
-int print_percent(va_list);
-int print_integer(va_list);
-int print_number(va_list);
 
 #endif
